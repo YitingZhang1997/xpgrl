@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="XPG-RL: Reinforcement Learning with Explainable Priority Guidance for Efficiency-Boosted Mechanical Search">
+  <meta name="keywords" content="XPG-RL">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XPG-RL: Reinforcement Learning with Explainable Priority Guidance for Efficiency-Boosted Mechanical Search</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/frog-logo.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <!-- <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a> -->
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://umfieldrobotics.github.io/TURTLMap/">
+            TURTLMap
+          </a>
+          <a class="navbar-item" href="https://fieldrobotics.engin.umich.edu/research">
+            Our Lab - FRoG
+          </a>
+          <!-- <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+           <!-- use smaller title size -->
+          <h1 class="title is-3 publication-title">OceanSim: A GPU-Accelerated Underwater Robot Perception Simulation Framework</h1>
+          <h2 class="subtitle is-4" style="margin-bottom:0.15em;">
+            Beta Release Available Now
+          </h2>
+          <!-- Featured by NVIDIA Robotics -->
+          <!-- pull this up right under the subtitle -->
+          <p class="has-text-centered featured-note"
+          style="margin-top:0; color:red; font-size:1.1em; font-weight:bold;">
+          <a href="https://www.linkedin.com/posts/nvidiarobotics_robotics-underwaterrobotics-simulation-activity-7313986055894880257-Dfmq?utm_source=share&utm_medium=member_desktop&rcm=ACoAACB8Y7sB7ikB6wVGPL5NrxYkNwk8RTEJ-3Y"
+            target="_blank"
+            style="color:red; text-decoration:underline;">
+          featured by NVIDIA robotics
+          </a>
+          </p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sites.google.com/umich.edu/yitingzhang/">Yiting Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/shichen-li-714203203/">Shichen Li</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/shichen-li-714203203/">Elena Shrestha</a><sup>1</sup>
+            </span>
+            <!-- <span class="author-block">
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+            </span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <!-- <span class="author-block"><sup>*</sup>Equal Contribution</span> -->
+            <!-- <span class="author-block"><sup>†</sup>Corresponding Author</span> -->
+            <span class="author-block"><sup>1</sup>University of Michigan, Ann Arbor</span>
+            <span class="author-block"><sup>2</sup>University of Illinois, Urbana-Champaign</span>
+          </div>
+
+
+          <!-- create a new column with a button pointing to the subscription form -->
+          <!-- create a new column with a button pointing to the subscription form -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.20969"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.20969"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=mhHDaBf3Xt4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/umfieldrobotics/OceanSim"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+                <!-- New Twitter placeholder -->
+              <!-- <span class="link-block">
+                <a href="https://x.com/justsimonjust/status/1907793513183367232"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>X/Twitter</span>
+                </a>
+              </span> -->
+
+              <!-- New LinkedIn placeholder -->
+              <!-- <span class="link-block">
+                <a href="https://www.linkedin.com/posts/jingyu-song-93763a132_robotics-underwaterrobotics-simulation-activity-7313545874091958272-qnwC?utm_source=share&utm_medium=member_desktop&rcm=ACoAACB8Y7sB7ikB6wVGPL5NrxYkNwk8RTEJ-3Y"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-linkedin"></i>
+                  </span>
+                  <span>LinkedIn</span>
+                </a>
+              </span> -->
+
+              <!-- LinkedIn post, use news icon -->
+              <!-- <span class="link-block">
+                <a href="https://www.linkedin.com/posts/jingyu-song-93763a132_i-am-happy-to-share-that-our-paper-activity-7227132379373473792-Ci1H?utm_source=share&utm_medium=member_desktop"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-linkedin"></i>
+                  </span>
+                  <span>LinkedIn Post</span>
+                  </a>
+              </span> -->
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div> -->
+          </div>
+
+          <!-- create a new column with a button pointing to the subscription form -->
+          <!-- create a new column with a button pointing to the subscription form -->
+          <!-- <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKWMhE4L6R4jjvEw_bfMtLigXbv5WZeijDah5vk2SpQZW1hA/viewform?usp=header"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span>Subscribe for the Latest OceanSim News!</span>
+                </a>
+              </span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/pitch.png" alt="XPG-RL" style="width: 100%; height: auto;">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/images/demo_new.pdf"
+                type="video/mp4">
+      </video> -->
+      <!-- add image docs/static/images/pitch.svg-->
+      <h2 class="subtitle has-text-centered">
+        We propose XPG-RL, a reinforcement learning framework for mechanical search tasks.
+      </h2>
+      <!-- <img src="./static/images/pitch.png" alt="OceanSim" style="width: 100%; height: auto;"> -->
+    </div>
+  </div>
+</section>
+
+<section class="video-section" style="text-align: center;">
+  <div class="video-container" style="display: inline-block;">
+    <iframe width="900" height="506"
+            src="https://www.youtube.com/watch?v=mhHDaBf3Xt4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Mechanical search (MS) in cluttered environments remains a 
+          significant challenge for autonomous manipulators, requiring 
+          long-horizon planning and robust state estimation under 
+          occlusions and partial observability. In this work, we 
+          introduce XPG-RL, a reinforcement learning framework that 
+          enables agents to efficiently perform MS tasks through 
+          explainable, priority-guided decision-making based on raw 
+          sensory inputs. XPG-RL integrates a task-driven action 
+          prioritization mechanism with a learned context-aware 
+          switching strategy that dynamically selects from a discrete 
+          set of action primitives such as target grasping, occlusion 
+          removal, and viewpoint adjustment. Within this strategy, a 
+          policy is optimized to output adaptive threshold values that 
+          govern the discrete selection among action primitives. The 
+          perception module fuses RGB-D inputs with semantic and 
+          geometric features to produce a structured scene 
+          representation for downstream decision-making. Extensive 
+          experiments in both simulation and real-world settings 
+          demonstrate that XPG-RL consistently outperforms baseline 
+          methods in task success rates and motion efficiency, 
+          achieving up to 4.5x higher efficiency in 
+          long-horizon tasks. These results underscore the benefits 
+          of integrating domain knowledge with learnable decision
+          -making policies for robust and efficient robotic 
+          manipulation.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- Overview section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            XPG-RL consists of two main components: (1) a perception pipeline, which processes fused RGB-D images to extract semantic and 
+            geometric context and builds a compact scene representation; and (2) an RL-based decision-making module, which takes this representation 
+            as input and learns a policy to predict adaptive thresholds. These thresholds guide the selection among priority-structured action 
+            candidates (e.g., target grasping, occlusion removal, and viewpoint adjustment), enabling context-aware and efficient action execution.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <img src="./static/images/method_overview.pdf" alt="XPG-RL Overview" style="width: 100%; height: auto;">
+  </div>
+</section>
+
+<!--Priority-Guided Action section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Priority-Guided Action Candidates</h2>
+        <div class="content has-text-justified">
+          <p>
+           The action space consists of three discrete primitives—target grasping, occlusion removal, and viewpoint adjustment—ranked from highest to lowest priority. 
+           Learned thresholds govern switching between these actions, enabling the agent to make efficient, interpretable decisions by sequentially evaluating actions in priority order.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <img src="./static/images/actions.pdf" alt="XPG-RL Actions" style="width: 100%; height: auto;">
+  </div>
+</section>
+
+<!-- Results section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            XPG-RL outperforms baselines across all clutter levels, with relative efficiency gains widening as object count increases.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <img src="./static/images/exp_efficiency.png" alt="XPG-RL Results" style="width: 60%; height: auto;">
+    
+  </div>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{zhang2025xpg,
+                title={Xpg-rl: Reinforcement learning with explainable priority guidance for efficiency-boosted mechanical search},
+                author={Zhang, Yiting and Li, Shichen and Shrestha, Elena},
+                journal={arXiv preprint arXiv:2504.20969},
+                year={2025}
+}</code></pre>
+  </div>
+</section>
+
+<!-- cite nerfies project page https://github.com/nerfies/nerfies.github.io -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page is modified based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
